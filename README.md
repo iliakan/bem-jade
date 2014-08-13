@@ -20,4 +20,5 @@ var result = jade.renderFile('filename.jade', {
 });
 ```
 
+For client-side compiled templates, a global `window.bem` variable will also work. 
 
