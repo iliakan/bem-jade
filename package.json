@@ -1,0 +1,30 @@
+{
+  "name":            "bem-jade",
+  "version":         "0.0.1",
+  "author":          "Roman Komarov <kizu@kizu.ru>, Ilya Kantor <iliakan@gmail.com>",
+  "licence":         "MIT",
+  "description":     "Smart mixins for writing BEM in Jade",
+  "keywords":        [
+    "jade",
+    "bem"
+  ],
+  "homepage":        "https://github.com/iliakan/bem-jade#readme",
+  "bugs":            {
+    "url": "https://github.com/iliakan/bem-jade/issues"
+  },
+  "repository":      {
+    "type": "git",
+    "url":  "git://github.com/iliakan/bem-jade.git"
+  },
+  "devDependencies": {
+    "jade":   "*",
+    "mocha":  "*",
+    "should": "*"
+  },
+  "scripts":         {
+    "test": "./node_modules/.bin/mocha --require should --reporter list"
+  },
+  "engines":         {
+    "node": "*"
+  }
+}

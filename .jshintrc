@@ -1,0 +1,13 @@
+{
+  "maxerr": 25,
+  "latedef": "nofunc",
+  "browser": false,
+  "node": true,
+  "indent": 2,
+  "camelcase": true,
+  "newcap": true,
+  "undef": true,
+  "multistr": true,
+  "noyield": true,
+  "-W004": true
+}
