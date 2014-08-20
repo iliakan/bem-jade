@@ -20,5 +20,4 @@ var result = jade.renderFile('filename.jade', {
 });
 ```
 
-For client-side compiled templates, a global `window.bem` variable will also work. 
-
+The compiled function is still larger than non-bem equivalent, but gzips pretty good (lots of repetition), so the final overhead is <20%.
