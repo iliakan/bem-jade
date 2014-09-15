@@ -14,6 +14,7 @@ include bem
 JS:
 ```
 var bem = require('bem-jade');
+var jade = reqiure('jade');
 var result = jade.renderFile('filename.jade', {
  bem: bem(),
  name: 'Joe'
