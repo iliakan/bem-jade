@@ -96,15 +96,16 @@ module.exports = function(settings) {
       } else if (bem_chain_contexts[contextIndex - 1] === 'list') {
         newTag = 'li';
       }
-    }
+      
 
-    //Attributes context checks
-    if (attributes.href) {
-      newTag = 'a';
-    } else if (attributes.for) {
-      newTag = 'label';
-    } else if (attributes.src) {
-      newTag = 'img';
+      //Attributes context checks
+      if (attributes.href) {
+        newTag = 'a';
+      } else if (attributes.for) {
+        newTag = 'label';
+      } else if (attributes.src) {
+        newTag = 'img';
+      }
     }
 
     //Contextual wrappers

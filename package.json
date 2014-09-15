@@ -1,6 +1,6 @@
 {
   "name":            "bem-jade",
-  "version":         "0.0.2",
+  "version":         "0.1.0",
   "author":          "Roman Komarov <kizu@kizu.ru>, Ilya Kantor <iliakan@gmail.com>",
   "licence":         "MIT",
   "description":     "Smart mixins for writing BEM in Jade",
