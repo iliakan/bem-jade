@@ -21,4 +21,6 @@ var result = jade.renderFile('filename.jade', {
 });
 ```
 
-The compiled function is still larger than non-bem equivalent, but gzips pretty good (lots of repetition), so the final overhead is <20%.
+The compiled function is still larger than pure jade equivalent, but gzips pretty good (lots of repetition), so the overhead is under 20%.
+
+The original `bem.jade` is not suited for client-side.
