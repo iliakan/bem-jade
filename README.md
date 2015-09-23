@@ -1,4 +1,4 @@
-This is a refactored fork of https://github.com/kizu/bemto, see https://github.com/kizu/bemto/Readme.md for syntax of mixins `+b` and `+e`.
+This is a refactored fork of https://github.com/kizu/bemto, see https://github.com/kizu/bemto/README.md for syntax of mixins `+b` and `+e`.
 
 Template:
 
