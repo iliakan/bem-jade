@@ -1,7 +1,7 @@
 include ../../bem
 
 mixin link(url)
-  +b('span').link(href=url)&attributes(attributes)
+  +b.link(href=url)&attributes(attributes)
     block
 
 p
@@ -14,7 +14,7 @@ p
   +link('http://kizu.ru').url(rel="me") Here I am
 
 p
-  +link Ah, I'm not a link
+  +b('span').link Ah, I'm not a link
 
 p
   +link('https://github.com')
