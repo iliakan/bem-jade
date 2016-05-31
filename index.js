@@ -14,7 +14,6 @@ module.exports = function(settings) {
   settings.few_modifiers_per_class = settings.few_modifiers_per_class || false;
 
   return function(buf, bem_chain, bem_chain_contexts, tag, isElement) {
-    //console.log("-->", arguments);
     var block = this.block;
     var attributes = this.attributes || {};
 
@@ -29,7 +28,6 @@ module.exports = function(settings) {
 
       classes = classes.split(' ');
 
-      console.log(settings.few_modifiers_per_class);
       if (settings.few_modifiers_per_class) {
         classes.map(function(cls) {
           tokens = cls.match(new RegExp('.+?(?=' + settings.modifier + '|$)', 'gi'));
