@@ -11,6 +11,7 @@ module.exports = function(settings) {
   settings.element = settings.element || '__';
   settings.modifier = settings.modifier || '_';
   settings.default_tag = settings.default_tag || 'div';
+  settings.few_modifiers_per_class = settings.few_modifiers_per_class || false;
 
   return function(buf, bem_chain, bem_chain_contexts, tag, isElement) {
     //console.log("-->", arguments);
@@ -19,12 +20,24 @@ module.exports = function(settings) {
 
     // Rewriting the class for elements and modifiers
     if (attributes.class) {
-      var bem_classes = attributes.class;
+      var classes = attributes.class;
+      var bem_classes = [];
 
-      if (bem_classes instanceof Array) {
-        bem_classes = bem_classes.join(' ');
+      if (classes instanceof Array) {
+        classes = classes.join(' ');
       }
-      bem_classes = bem_classes.split(' ');
+
+      classes = classes.split(' ');
+
+      console.log(settings.few_modifiers_per_class);
+      if (settings.few_modifiers_per_class) {
+        classes.map(function(cls) {
+          tokens = cls.match(new RegExp('.+?(?=' + settings.modifier + '|$)', 'gi'));
+          bem_classes.push.apply(bem_classes, tokens);
+        })
+      } else {
+        bem_classes = classes;
+      }
 
       var bem_block;
       try {
@@ -96,7 +109,7 @@ module.exports = function(settings) {
       } else if (bem_chain_contexts[contextIndex - 1] === 'list') {
         newTag = 'li';
       }
-      
+
 
       //Attributes context checks
       if (attributes.href) {
