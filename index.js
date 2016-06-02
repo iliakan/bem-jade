@@ -18,8 +18,8 @@ module.exports = function(settings) {
     var attributes = this.attributes || {};
 
     // Rewriting the class for elements and modifiers
-    if (attributes.class) {
-      var bem_classes = attributes.class;
+    if (attributes['class']) {
+      var bem_classes = attributes['class'];
 
       if (bem_classes instanceof Array) {
         bem_classes = bem_classes.join(' ');
@@ -69,7 +69,7 @@ module.exports = function(settings) {
       }
 
       // Write modified classes to attributes in the correct order
-      attributes.class = bem_classes.sort().join(' ');
+      attributes['class'] = bem_classes.sort().join(' ');
     }
 
     bem_tag(buf, block, attributes, bem_chain, bem_chain_contexts, tag);
@@ -101,7 +101,7 @@ module.exports = function(settings) {
       //Attributes context checks
       if (attributes.href) {
         newTag = 'a';
-      } else if (attributes.for) {
+      } else if (attributes['for']) {
         newTag = 'label';
       } else if (attributes.src) {
         newTag = 'img';
